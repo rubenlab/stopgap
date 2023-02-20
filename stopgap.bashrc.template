@@ -1,0 +1,18 @@
+export STOPGAPHOME="/home/nibtapu4/local/stopgap"        # REPLACE WITH YOUR STOPGAP INSTALLATION DIRECTORY
+export MATLAB_ROOT="/home/nibtapu4/local/MATLAB/R2020b"  # REPLACE WITH YOUR MATLAB  INSTALLATION DIRECTORY
+
+####### NO NEED TO MODIFY ANYTHING BELOW THIS LINE #######
+
+module load gcc/9.3.0 openmpi/gcc.9/4.1.4
+module list 
+
+export LD_LIBRARY_PATH="\
+${STOPGAPHOME}/lib:\
+${MATLAB_ROOT}/bin/glnxa64:\
+${MATLAB_ROOT}/runtime/glnxa64:\
+${MATLAB_ROOT}/sys/opengl/lib/glnxa64:\
+${MATLAB_ROOT}/sys/os/glnxa64/:\
+$LD_LIBRARY_PATH"
+
+echo "LD_LIBRARY_PATH: ${LD_LIBRARY_PATH}" | grep --color=always ${STOPGAPHOME}
+echo 
