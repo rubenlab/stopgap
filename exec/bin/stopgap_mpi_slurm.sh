@@ -7,7 +7,7 @@
 # WW 04-2019
 
 # Source libraries
-source $STOPGAPHOME/bin/stopgap_config.sh 
+source $STOPGAPHOME/exec/lib/stopgap_config.sh 
 
 # Bash parameters
 set -e              # Crash on error
@@ -56,7 +56,7 @@ export MCR_CACHE_ROOT="/tmp/${USER}/mcr/stopgap_${procnum}"
 
 # Run matlab script
 # /usr/bin/time -v 
-$STOPGAPHOME/lib/stopgap ${rootdir} ${paramfilename} ${procnum} ${n_cores}
+$STOPGAPHOME/bin/stopgap ${rootdir} ${paramfilename} ${procnum} ${n_cores}
 
 
 # Cleanup

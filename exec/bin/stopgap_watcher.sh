@@ -5,7 +5,7 @@
 # WW 06-2019
 
 # Bash parameters
-source $STOPGAPHOME/lib/stopgap_config.sh 
+source $STOPGAPHOME/exec/lib/stopgap_config.sh 
 
 set -e              # Crash on error
 set -o nounset      # Crash on unset variables
@@ -19,7 +19,7 @@ export MCR_CACHE_ROOT="/tmp/${USER}/mcr/stopgap_watcher"
 
 
 # Run matlab script
-$STOPGAPHOME/lib/stopgap_watcher "$@"
+$STOPGAPHOME/bin/stopgap_watcher "$@"
 
 # Cleanup
 rm -rf /tmp/${USER}/mcr/stopgap_watcher

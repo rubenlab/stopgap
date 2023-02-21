@@ -9,7 +9,7 @@ set -e              # Crash on error
 set -o nounset      # Crash on unset variables
 
 # Source libraries
-source $STOPGAPHOME/lib/stopgap_config.sh 
+source $STOPGAPHOME/exec/lib/stopgap_config.sh 
 
 # Parse input arguments
 args=("$@")
@@ -31,7 +31,7 @@ mkdir -p /tmp/${USER}/mcr/stopgap_extract_${procnum}
 export MCR_CACHE_ROOT="/tmp/${USER}/mcr/stopgap_extract_${procnum}"
 
 # Run matlab script
-$STOPGAPHOME/lib/stopgap_extract ${rootdir} ${param_name} ${procnum}
+$STOPGAPHOME/bin/stopgap_extract ${rootdir} ${param_name} ${procnum}
 
 # Cleanup
 rm -rf /tmp/${USER}/mcr/stopgap_extract_${procnum}
