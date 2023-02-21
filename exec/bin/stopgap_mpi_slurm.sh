@@ -7,7 +7,7 @@
 # WW 04-2019
 
 # Source libraries
-source $STOPGAPHOME/lib/stopgap_config.sh 
+source $STOPGAPHOME/bin/stopgap_config.sh 
 
 # Bash parameters
 set -e              # Crash on error
